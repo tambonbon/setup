@@ -13,24 +13,28 @@ set number
 syntax on
 colorscheme elflord 
 set tabstop=4
-set cindent
+set autoindent
+set smartindent
 set expandtab
 set softtabstop=4
+set shiftwidth=4
 set novisualbell
 set backspace=indent,eol,start
 nnoremap 4 $a
 nnoremap 5 %
 nnoremap 6 ^i
-"inoremap " ""<left>
-"inoremap ' ''<left>
+inoremap " ""<left>
+inoremap ' ''<left>
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<cr> {<cr>};<esc>o
-inoremap <expr> ) strpart(getline('.'), col('.')-1, 1) == ")" ? "\<right>" : ")"
-inoremap <expr> ] strpart(getline('.'), col('.')-1, 1) == "]" ? "\<right>" : "]"
-inoremap <expr> } strpart(getline('.'), col('.')-1, 1) == "}" ? "\<right>" : "}"
+""inoremap <expr> ) strpart(getline('.'), col('.')-1, 1) == ")" ? "\<right>" : ")"
+""inoremap <expr> ] strpart(getline('.'), col('.')-1, 1) == "]" ? "\<right>" : "]"
+""inoremap <expr> } strpart(getline('.'), col('.')-1, 1) == "}" ? "\<right>" : "}"
+set pastetoggle=<F5>
+
 set visualbell
 "map <Enter> o<ESC>
 "map <S-Enter> O<ESC>
@@ -39,5 +43,7 @@ inoremap <c-l> <right>
 set noerrorbells
 set mouse=a
 set title
+set clipboard=unnamedplus
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 set completeopt=longest,menuone
+
