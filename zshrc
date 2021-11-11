@@ -17,9 +17,11 @@ ZSH_THEME="wedisagree"
 
 # Set JAVA_HOME
 export JAVA_HOME_11=$(/usr/libexec/java_home -v11)
-#export JAVA_HOME=$JAVA_HOME_11
+export JAVA_HOME=$JAVA_HOME_11
 export JAVA_HOME_8=$(/usr/libexec/java_home -v 1.8)
-export JAVA_HOME=$JAVA_HOME_8
+export JAVA_HOME_17=$(/usr/libexec/java_home -v17)
+#export JAVA_HOME=$JAVA_HOME_8
+#export JAVA_HOME=$JAVA_HOME_17
 # Set Maven
 export PATH=/opt/apache-maven/bin:$PATH
 
@@ -132,6 +134,14 @@ plugins=(
 	docker-compose
 )
 
+#########
+# TAB COMPLETION FOR AZURE
+#########
+#autoload -U +X bashcompinit && bashcompinit
+#source ~/.az.completion
+### 
+
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -165,3 +175,5 @@ setopt no_share_history
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/tammy/.sdkman"
 [[ -s "/Users/tammy/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/tammy/.sdkman/bin/sdkman-init.sh"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
