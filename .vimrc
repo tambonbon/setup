@@ -6,6 +6,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'artur-shaik/vim-javacomplete2'
+"Plugin 'neoclide/coc.nvim'
 call vundle#end()
 filetype plugin indent on
 
@@ -30,7 +31,7 @@ inoremap [ []<left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<cr> {<cr>};<esc>o
-""inoremap <expr> ) strpart(getline('.'), col('.')-1, 1) == ")" ? "\<right>" : ")"
+inoremap <expr> ) strpart(getline('.'), col('.')-1, 1) == ")" ? "\<right>" : ")"
 ""inoremap <expr> ] strpart(getline('.'), col('.')-1, 1) == "]" ? "\<right>" : "]"
 ""inoremap <expr> } strpart(getline('.'), col('.')-1, 1) == "}" ? "\<right>" : "}"
 set pastetoggle=<F5>
@@ -40,10 +41,36 @@ set visualbell
 "map <S-Enter> O<ESC>
 inoremap <c-l> <esc>la
 inoremap <c-l> <right>
+
+" Set delete to delete, not cut
+"nnoremap x "_x
+"nnoremap d "_d
+"nnoremap D "_D
+"vnoremap d "_d
+
+"nnoremap <leader>d ""d
+"nnoremap <leader>D ""D
+"vnoremap <leader>d ""d
+
+" Set d to delete
+nnoremap <leader>d "_d
+xnoremap <leader>d "_d
+
+nnoremap <leader>c "_c
+xnoremap <leader>c "_c
+
+nnoremap <leader>y "*y
+xnoremap <leader>y "*y
+
+xnoremap <leader>p "_dP
+
+set whichwrap+=<,h
+set whichwrap+=>,l
+set whichwrap+=[,]
+
 set noerrorbells
 set mouse=a
 set title
 set clipboard=unnamedplus
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 set completeopt=longest,menuone
-
