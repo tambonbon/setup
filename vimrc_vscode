@@ -40,10 +40,26 @@ set visualbell
 "map <S-Enter> O<ESC>
 inoremap <c-l> <esc>la
 inoremap <c-l> <right>
+
+" Set d to delete
+nnoremap <leader>d "_d
+xnoremap <leader>d "_d
+
+nnoremap <leader>c "_c
+xnoremap <leader>c "_c
+
+nnoremap <leader>y "*y
+xnoremap <leader>y "*y
+
+xnoremap <leader>p "_dP
+
+set whichwrap+=<,h
+set whichwrap+=>,l
+set whichwrap+=[,]
+
 set noerrorbells
 set mouse=a
 set title
 set clipboard=unnamedplus
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 set completeopt=longest,menuone
-
