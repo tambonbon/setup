@@ -1,0 +1,19 @@
+[user]
+	email = nttammy@yahoo.com
+	name = tambonbon
+[alias]
+	cmp = "!f() { git add -A && git commit -m \"$@\" && git push; }; f"
+[alias]
+    acm = "!f() { git add -A && git commit -m \"$@\"; }; f"
+    st = status -sb
+    co = checkout
+    cob = checkout -b
+    del = branch -D
+    done = !git push origin HEAD
+    br-loc = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+    br-rem = branch --remotes --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+    br-all = branch --all --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+    lg = !git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30
+[core]
+	autocrlf = input
+	excludesfile = /Users/tammy/.gitignore
