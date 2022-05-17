@@ -1,19 +1,83 @@
-[user]
+]
 	email = nttammy@yahoo.com
 	name = tambonbon
 [alias]
-	cmp = "!f() { git add -A && git commit -m \"$@\" && git push; }; f"
-[alias]
-    acm = "!f() { git add -A && git commit -m \"$@\"; }; f"
-    st = status -sb
     co = checkout
-    cob = checkout -b
+    cob = "!f() { git fetch && git checkout -b $@; }; f"
+    
+    ####
+    st = "!f() { git fetch && git status -sb; }; f"
+    f = fetch
+    p = pull
     del = branch -D
+
+    ####
+    cmp = "!f() { git add -A && git commit -m \"$@\" && git push; }; f"
+    acm = "!f() { git add -A && git commit -m \"$@\"; }; f"
     done = !git push origin HEAD
-    br-loc = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
-    br-rem = branch --remotes --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
-    br-all = branch --all --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+
+    ####
+    br-loc = "!f() {git fetch && git branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate; }; f"
+    br-rem = "!f() { git fetch && git branch --remotes --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate; }; f"
+    br-all = "!f() { git fetch && git branch --all --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate; }; f"
+
+    ####
     lg = !git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30
+    ll = "!f() { git fetch && git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --decorate --numstat; }; f"
+    ll-preview = "!f() { git fetch && git log HEAD..origin/$(git branch --show-current) --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --decorate --numstat; }; f"
+
+    ####
+    d = diff
+    d-ns = diff --numstat
+    d-s = diff --summary
+    d-ll = "!git ll -1"
+    d-lc = diff --cached HEAD^
+    d-1cm  = "!f() { git diff "$1"^.."$1"; }; f"
+    d-1cm-ll  = "!f() { git ll "$1"^.."$1"; }; f"
+    d-ll-preview  = "!f() { git fetch && git log -p HEAD..origin/$(git branch --show-current) --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --decorate --numstat; }; f"
+    d-preview = "!f() { git diff HEAD..origin/$(git branch --show-current); }; f"
+    ####
+    sl = stash list
+    sa = stash apply
+    ss = stash save
 [core]
 	autocrlf = input
 	excludesfile = /Users/tammy/.gitignore
+	pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    line-numbers = true
+    #minus-style = syntax strike auto
+    #plus-style = syntax bold auto
+    features = decorations
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+
+[delta "decorations"]
+    #commit-style = auto
+    #file-style = blue
+    #hunk-header-decoration-style = ul ol
+    #hunk-header-file-style = red
+    #hunk-header-line-number-style = "#067a00"
+    #hunk-header-style = file line-number syntax
+
+    minus-style = syntax strike normal
+    plus-style = green bold normal
+	minus-emph-style = syntax strike auto 
+	minus-non-emph-style = syntax strike auto
+	plus-emph-style = white bold green
+	plus-non-emph-style = green bold normal
+	file-style = yellow bold none
+	file-decoration-style = yellow box
+	hunk-header-style = file line-number magenta bold
+	hunk-header-decoration-style = magenta box
+	minus-empty-line-marker-style = normal normal
+	plus-empty-line-marker-style = normal normal
+	line-numbers-right-format = "{np:^4}‚îÇ "
