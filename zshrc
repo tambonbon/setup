@@ -17,17 +17,18 @@ ZSH_THEME="wedisagree"
 
 # Set JAVA_HOME
 export JAVA_HOME_11=$(/usr/libexec/java_home -v11)
-export JAVA_HOME=$JAVA_HOME_11
 export JAVA_HOME_8=$(/usr/libexec/java_home -v 1.8)
 export JAVA_HOME_17=$(/usr/libexec/java_home -v17)
-#export JAVA_HOME=$JAVA_HOME_8
+#export JAVA_HOME=$JAVA_HOME_11
+export JAVA_HOME=$JAVA_HOME_8
 #export JAVA_HOME=$JAVA_HOME_17
 # Set Maven
 export PATH=/opt/apache-maven/bin:$PATH
 
 # Set SPARK_HOME
-export SPARK_HOME=/Users/tammy/sparkProjects/spark-3.1.2-bin-hadoop2.7
+export SPARK_HOME=/usr/local/Cellar/apache-spark/3.4.1/libexec
 export PATH=$SPARK_HOME/bin:$PATH
+
 
 # Set HADOOP
 export HADOOP_HOME=/usr/local/cellar/hadoop/3.3.1/libexec
@@ -38,9 +39,30 @@ export YARN_CONF_DIR=$HADOOP_HOME/etc/hadoop
 alias hadoop_start=$HADOOP_HOME/sbin/start-all.sh
 alias hadoop_stop=$HADOOP_HOME/sbin/stop-all.sh
 
+# Path to virtualev
+export VIRTUAL_ENV='/Users/tammy/Library/Python/3.9/bin'
+export PATH=$VIRTUAL_ENV/bin:$PATH
+
 # Set Zeppelin
 export ZEPPELIN_HOME=/Users/tammy/zeppelinNoteBooks/zeppelin-0.9.0-bin-all
 
+# Set Rust
+. "$HOME/.cargo/env"
+
+# Set flutter
+export PATH="$PATH:/Users/tammy/Downloads/zip/flutter/bin"
+
+# Set Kafka
+export KAFKA_HOME=/Users/tammy/kafkaProjects/kafka_2.13-2.6.0
+export PATH=$KAFKA_HOME/bin:$PATH
+
+# Set nvm
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
+# Change vim to nvim
+alias vim="nvim"
+alias vi="nvim"
 
 # Remove share history
 setopt noincappendhistory
@@ -177,3 +199,8 @@ export SDKMAN_DIR="/Users/tammy/.sdkman"
 [[ -s "/Users/tammy/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/tammy/.sdkman/bin/sdkman-init.sh"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Created by `pipx` on 2022-12-18 11:39:34
+export PATH="$PATH:/Users/tammy/.local/bin"
