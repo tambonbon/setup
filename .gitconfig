@@ -4,7 +4,7 @@
 [alias]
     co = checkout
     cob = "!f() { git fetch && git checkout -b $@; }; f"
-    
+    cop = "!f() { git fetch && git checkout $@ && git pull; }; f"
     ####
     st = "!f() { git fetch && git status -sb; }; f"
     f = fetch
@@ -14,7 +14,8 @@
     ####
     cmp = "!f() { git add -A && git commit -m \"$@\" && git push; }; f"
     acm = "!f() { git add -A && git commit -m \"$@\"; }; f"
-    done = !git push origin HEAD
+    done = "!f() { git push --set-upstream origin $(git branch --show-current); }; f"
+    cmpdone = "!f() { git cmp \"$@\" && git done; }; f"
 
     ####
     br-loc = "!f() {git fetch && git branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate; }; f"
@@ -44,6 +45,7 @@
 	autocrlf = input
 	excludesfile = /Users/tammy/.gitignore
 	pager = delta
+    editor = nvim
 
 [interactive]
     diffFilter = delta --color-only
@@ -80,4 +82,4 @@
 	hunk-header-decoration-style = magenta box
 	minus-empty-line-marker-style = normal normal
 	plus-empty-line-marker-style = normal normal
-	line-numbers-right-format = "{np:^4}‚îÇ "
+	line-numbers-right-format = "{np:^4}│ "
