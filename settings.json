@@ -1,0 +1,235 @@
+{
+    "files.watcherExclude": {
+      "**/.bloop": true,
+      "**/.metals": true,
+      "**/.ammonite": true
+    },
+    // "metals.javaHome": "/Users/tammy/Library/Java/JavaVirtualMachines/adopt-openjdk-11.0.10/Contents/Home",
+    "git.autofetch": true,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true,
+        "**/.bloop": true,
+        "**/.bsp": true,
+        "**/.idea":true,
+        "**/.vscode": true,
+        "**/.metals": true,
+        "**/.exercism": true
+    },
+    "files.associations": {
+        "*.sc": "scala"
+    },
+    "[scala]": {
+    
+    
+        "editor.suggestSelection": "first",
+        "editor.formatOnPaste": true,
+        "editor.formatOnType": true
+    },
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "files.autoSave": "afterDelay",
+    "vim.vimrc.enable": true,
+    "vim.useSystemClipboard": true,
+    "editor.fontFamily": "Source Code Pro, menlo",
+    "terminal.integrated.fontFamily": "menlo",
+    "terminal.integrated.fontSize": 13,
+    "editor.fontLigatures": "enabled",
+    "editor.fontSize": 12.5,
+    "metals.bloopSbtAlreadyInstalled": true,
+    "editor.fontWeight": "normal",
+    "vim.vimrc.path": "~/.vimrc_vscode",
+    // "java.home": "/Users/tammy/Library/Java/JavaVirtualMachines/adopt-openjdk-11.0.10/Contents/Home",
+    "settingsSync.ignoredSettings": [
+        "metals.javaHome",
+        "maven.terminal.useJavaHome"
+    ],
+    // "breadcrumbs.enabled": false,
+    // "editor.cursorBlinking": "blink",
+    // "editor.folding": false,
+    // "editor.hideCursorInOverviewRuler": true,
+    "editor.minimap.enabled": false,
+    "editor.occurrencesHighlight": "off",
+    "editor.roundedSelection": false,
+    "editor.selectionHighlight": false,
+    "editor.scrollBeyondLastLine": false,
+    "explorer.decorations.colors": false,
+    "explorer.openEditors.visible": 0,
+    "workbench.editor.showIcons": false,
+    "workbench.startupEditor": "none",
+    "editor.matchBrackets": false,
+  "subtleBrackets.style": {
+    "borderWidth": "1px",
+    "borderColor": "#528BFF",
+
+    "todohighlight.keywords": [
+        {
+          "text": "TODO:",
+          "color": "#C678DD",
+          "backgroundColor": "transparent"
+        },
+        {
+          "text": "NOTE:",
+          "color": "#C678DD",
+          "backgroundColor": "transparent"
+        },
+        {
+          "text": "FIXME:",
+          "color": "#C678DD",
+          "backgroundColor": "transparent"
+        }
+      ]
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.parameterHints.enabled": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "azureResourceManagerTools.parameterFiles": {},
+  "redhat.telemetry.enabled": false,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "gitlens.defaultDateFormat": null,
+  "gitlens.defaultDateShortFormat": null,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.currentLine.enabled": false,
+  "gitlens.statusBar.format": "Blame ${author}, ${agoOrDate}${' via 'pullRequest}",
+  "gitlens.codeLens.scopes": [
+    "document"
+  ],
+  "gitlens.codeLens.authors.command": "gitlens.toggleFileHeatmap",
+  "gitlens.advanced.messages": {
+    "suppressLineUncommittedWarning": true
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "workbench.tree.renderIndentGuides": "always",
+  "gitlens.views.branches.files.layout": "tree",
+  "[yaml]": {
+    "editor.defaultFormatter": "ms-azure-devops.azure-pipelines"
+  },
+  "diffEditor.renderSideBySide": false,
+  "workbench.editorAssociations": {
+    "*.html": "default",
+    "*.parquet": "default"
+  },
+  "explorer.autoReveal": "focusNoScroll",
+  "githubPullRequests.createOnPublishBranch": "never",
+  "editor.lineHeight": 1.45,
+  "editor.bracketPairColorization.enabled": false,
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-11",
+      "path": "/Users/tammy/Library/Java/JavaVirtualMachines/adopt-openjdk-11.0.10/Contents/Home",
+      "default": true
+    }
+  ],
+  "git.mergeEditor": false,
+  // "merge-conflict.codeLens.enabled": false,
+  // "merge-conflict.decorators.enabled": false,
+  "yaml.customTags": [
+    "!And",
+    "!And sequence",
+    "!If",
+    "!If sequence",
+    "!Not",
+    "!Not sequence",
+    "!Equals",
+    "!Equals sequence",
+    "!Or",
+    "!Or sequence",
+    "!FindInMap",
+    "!FindInMap sequence",
+    "!Base64",
+    "!Join",
+    "!Join sequence",
+    "!Cidr",
+    "!Ref",
+    "!Sub",
+    "!Sub sequence",
+    "!GetAtt",
+    "!GetAZs",
+    "!ImportValue",
+    "!ImportValue sequence",
+    "!Select",
+    "!Select sequence",
+    "!Split",
+    "!Split sequence"
+  ],
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "workbench.colorTheme": "Paper Dark",
+  "editor.tokenColorCustomizations": {
+    // "numbers": "#2247EB",
+    // "comments": "#687577",
+    "functions": "#BFBFBF",
+    "types": "#79f011",
+    // "keywords": "#2247EB",
+    "variables": "#BFBFBF",
+    "strings": "#d7af5f",
+    "textMateRules": [
+      {
+        "name": "Comment",
+        "scope": [
+          "comment",
+          "comment.block",
+          "comment.block.documentation",
+          "comment.line",
+          "comment.line.double-slash",
+          "punctuation.definition.comment",
+        ],
+        "settings": {
+          "fontStyle": "",
+          // "fontStyle": "italic underline",
+          // "fontStyle": "italic bold underline",
+        }
+      },
+      {
+        "name": "BoldText",
+        "scope": [
+          // "entity",
+          "entity.name.class",
+          "entity.name.function",
+          "entity.name.method",
+          "entity.name.section",
+          "entity.name.selector",
+          "entity.name.type",
+          "markup",
+          "punctuation.definition.string.begin",
+          "punctuation.definition.string.end",
+        ],
+        "settings": {
+          "fontStyle": "bold"
+        }
+      },
+      {
+        "name": "ItalicText",
+        "scope": [
+          "variable",
+          "entity.name.class.declaration"
+        ],
+        "settings": {
+          // "foreground": "#FF0000",
+          "fontStyle": "italic"
+        }
+      }
+    ]
+  },
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#393939"
+  },
+  "terminal.integrated.env.osx": {
+    "SPARK_HOME": "/usr/local/Cellar/apache-spark/3.4.1/libexec"
+  },
+  "python.languageServer": "Jedi",
+  "cSpell.userWords": [
+    "pyspark"
+  ],
+  "material-icon-theme.files.associations": {
+    "*.yml": "yaml",
+  },
+  "editor.multiCursorModifier": "ctrlCmd",
+  "vim.enableNeovim": true,
+  "vim.neovimConfigPath": "~/.config/nvim/init.vim    ",
+  "python.analysis.extraPaths": []
+}
