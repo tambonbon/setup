@@ -1,12 +1,12 @@
 {
+    "metals.javaHome": "/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home",
+    "java.jdt.ls.java.home": "/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home",
+
     "files.watcherExclude": {
         "**/.bloop": true,
         "**/.metals": true,
         "**/.ammonite": true
     },
-    "metals.javaHome": "/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home",
-    "java.jdt.ls.java.home": "/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home",
-    
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,
