@@ -1,0 +1,147 @@
+ 1  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    2  export PATH="/usr/local/bin:$PATH"
+    3  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/ttng/.zshrc
+    4  (echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/ttng/.zshrc
+    5  eval "$(/opt/homebrew/bin/brew shellenv)\n"
+    6  brew install oh-my-zsh
+    7  brew install nvim
+    8  brew install tmux
+    9  brew install sbt
+   10  python3 -v
+   11  brew install scalacenter/bloop/bloop\n
+   12  brew services start bloop
+   15  sudo rm -fr /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin
+   17  bloop --versiojn
+   18  bloop --version
+   20  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+   22  sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \\n       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+   23  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+   24  mkdir Rabobank
+   25  mkdir SKG
+   27  ls .
+   28  cd ttng
+   29  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+   30  sudo brew install openjdk@8
+   31  brew install openjdk@8
+   33  tar xzvf Downloads/apache-maven-3.9.6-bin.tar.gz
+   34  ls Downloads
+   35  tar xzvf Downloads/apache-maven-3.9.6-bin.tar.gz /opt/apache-maven
+   36  tar xzvf Downloads/apache-maven-3.9.6-bin.tar.gz --directory /opt/apache-maven
+   37  tar xzvf Downloads/apache-maven-3.9.6-bin.tar. -C  /opt/apache-maven
+   38  tar xzvf Downloads/apache-maven-3.9.6-bin.tar.gz -C  /opt/apache-maven
+   39  mkdir /opt/apache-maven
+   40  mv apache-maven-3.9.6 /opt/
+   41  sudo mv apache-maven-3.9.6 /opt/apache-maven
+   42  mvn -v
+   44  cd Rabobank
+   45  git clone https://raboweb@dev.azure.com/raboweb/Insurance-Pension/_git/lambda-rabo2ipo
+   46  git clone https://raboweb@dev.azure.com/raboweb/Insurance-Pension/_git/lambda-egress2ipo
+   47  git clone https://raboweb@dev.azure.com/raboweb/Insurance-Pension/_git/lambda-egress2ipo-adfcontent
+   48  git clone https://raboweb@dev.azure.com/raboweb/Insurance-Pension/_git/lambda-gpg-keys-generator
+   49  git clone https://raboweb@dev.azure.com/raboweb/Insurance-Pension/_git/lambda-insstore-ccs2gdp-adfcontent
+   50  git clone https://raboweb@dev.azure.com/raboweb/Insurance-Pension/_git/lambda-insstore-ipo-to-gdp
+   51  git clone https://raboweb@dev.azure.com/raboweb/Insurance-Pension/_git/lambda-insstore-ipo2gdp-adfcontent
+   52  git clone https://raboweb@dev.azure.com/raboweb/Insurance-Pension/_git/lambda-insurance-store
+   53  https://raboweb@dev.azure.com/raboweb/Insurance-Pension/_git/lambda-istore-adfcontent
+   54  git clone https://raboweb@dev.azure.com/raboweb/Insurance-Pension/_git/lambda-istore-adfcontent
+   55  git clone https://raboweb@dev.azure.com/raboweb/Insurance-Pension/_git/lambda-operations
+   56  git clone https://raboweb@dev.azure.com/raboweb/Insurance-Pension/_git/lambda-spark-monitoring
+   57  git clone https://raboweb@dev.azure.com/raboweb/Insurance-Pension/_git/level-adfcontent-from-edl
+   58  git clone https://raboweb@dev.azure.com/raboweb/Insurance-Pension/_git/level-data-from-edl
+   59  cd EDL-AF
+   60  git clone https://raboweb@dev.azure.com/raboweb/Enterprise%20Data%20Lake%20-%20Airflow/_git/af-lambda
+   61  git clone https://raboweb@dev.azure.com/raboweb/Enterprise%20Data%20Lake%20-%20Airflow/_git/af-egress2ipogdpconsumer
+   62  git clone https://raboweb@dev.azure.com/raboweb/Enterprise%20Data%20Lake%20-%20Airflow/_git/af-westeurope-insurance-ccs
+   63  git clone https://raboweb@dev.azure.com/raboweb/Enterprise%20Data%20Lake%20-%20Airflow/_git/af-westeurope-insurance-ipo
+   64  brew install colima
+   65  brew services start colima
+   66  source ~/.vimrc
+   67  nvim ~/.vimrc
+   68  sudo vim ~/.config/nvim/init.vim
+   69  vim ~/.vimrc_vscode
+   70  vim ~/.vimrc
+   71  cd .oh-my-zsh
+   72  which vim
+   73  which nvim
+   74  brew upgrade vim
+   75  brew upgrade nvim
+   76  brew install python3
+   77  brew remove vim
+   78  vim --version
+   79  python3 -m pip install --user --upgrade pynvim
+   81  vim ~/.config/nvim/init.vim
+   82  vim username.txt
+   83  mv username.txt Desktop
+   84  tmux a -t setup
+   85  echo $ZSH
+   86  sudo vim ~/.sbt/1.0/plugins/build.sbt
+
+  148  brew install nvm
+  149  brew install npm
+  150  npm install @angular-devkit/build-angular
+  151  npm install @angular/core
+  152  python3 --version
+  153  brew install python@3.9
+  154  nvm install 14
+  155  vim ~/.gitignore
+  156  npm install node_modules
+  157  npm cache clean --force
+  158  npm install -g @angular/cli
+  159  nvm install 18
+  160  ng serve
+  161  cd ~
+  162  cd SKG/skg-online
+  163  npm install @angular/cli
+  164  npm update
+  165  node --max_old_space_size=4096
+  166  node --max_old_space_size=4096 ng build
+  167  node --max_old_space_size=4096 node_modules/@angular/cli/bin/ng build --prod
+  168  node --max_old_space_size=4096 ../node_modules/@angular/cli/bin/ng build --prod
+  169  node --max_old_space_size=4096 ../node_modules/@angular/cli/bin/ng build
+  171  frontend
+  172  docker/testdata/init_testdata.sh
+
+  221  colima start --cpu 4 --memory 8
+  222  nvm use v18
+  223  npm install @cyclonedx/cdxgen
+  224  npm install-g @cyclonedx/cdxgen
+  226  nvm uninstall -g @cyclonedx/cdxgen
+  227  nvm uninstall -g @appthreat/cdxgen
+  228  npm uninstall @appthreat/cdxgen
+  229  npm uninstall @cylonedx/cdxgen
+  231  nvm ls
+  232  nvm install --lts
+  233  nvm --version
+  235  npm install @appthreat/cdxgen
+  236  cdxgen -o bom2.json
+  237  java --version
+  238  cdxgen -o bom3.json
+  239  brew install cdxgen
+  256  npm list -g
+  258  npm cache verify
+  259  npm ls
+  260  npm uninstall @cyclonedx/cdxgen@10.2.4\n
+  261  npm uninstall --save
+  262  npm uninstall @cyclonedx/cdxgen@10.2.4 --save
+  337  cdxgen -o bom.json --server-url https://dtrackapi.ordina.nl --api-key oAnMlSHedP1gxjFkxbOVvHio2Vbq6ohn --project-id d9689527-3222-4108-8f4d-b77ccde9e99b
+  449  node --versions
+  450  node use 20c
+  451  node use 20
+  452  npm uninstall angular-cli
+  455  npm uninstall @angular/cli@17.2.3
+  456  npm -g uninstall @angular/cli@17.2.3
+  457  npm uninstall -g @angular/cli@17.2.3
+  458  npm -g list
+  459  npm uninstall -g @angular/cli
+  460  npm uninstall @angular/cli --save
+  461  npm uninstall -g @angular/cli --save
+  462  npm list | head
+  463  npm -g list | head
+  464  brew uninstall angular-cli
+  465  angular-cli
+  466  npm cache clean
+  467  npm cache --forceclean
+  468  npm cache --force clean
+  469* cd /opt/homebrew/lib/node_modules
+
+
