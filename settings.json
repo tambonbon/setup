@@ -1,12 +1,9 @@
 {
-    "metals.javaHome": "/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home",
-    "java.jdt.ls.java.home": "/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home",
-
-    "files.watcherExclude": {
-        "**/.bloop": true,
-        "**/.metals": true,
-        "**/.ammonite": true
-    },
+  "files.watcherExclude": {
+    "**/.bloop": true,
+    "**/.metals": true,
+    "**/.ammonite": true
+  },
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,
@@ -45,19 +42,19 @@
     "editor.roundedSelection": false,
     "editor.selectionHighlight": false,
     "editor.scrollBeyondLastLine": false,
-    "editor.matchBrackets": "never",
+    "editor.matchBrackets": false,
     "editor.tabSize": 2,
     "editor.detectIndentation": false,
     "editor.parameterHints.enabled": false,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.tokenColorCustomizations": {
-        // "numbers": "#2247EB",
+        "numbers": "#2247EB",
         // "comments": "#687577",
-        "functions": "#BFBFBF",
-        "types": "#79f011",
-        // "keywords": "#2247EB",
+        "functions": "#1437d4",
+        "types": "#395f18",
+        // "keywords": "#1437d4",
         "variables": "#BFBFBF",
-        "strings": "#d7af5f",
+        "strings": "#3c9251",
         "textMateRules": [
             {
                 "name": "Comment",
@@ -116,7 +113,7 @@
 
     "vim.vimrc.enable": true,
     "vim.useSystemClipboard": true,
-    "vim.vimrc.path": "~/.vimrc_vscode",
+    "vim.vimrc.path": "/Users/Tam.T.Nguyen/.vimrc_vscode",
     "vim.enableNeovim": true,
 
     "terminal.integrated.fontFamily": "menlo",
@@ -132,7 +129,7 @@
         "java.jdt.ls.java.home"
     ],
 
-    "workbench.colorTheme": "Paper Dark",
+    "workbench.colorTheme": "Nord Light Brighter",
     "workbench.editor.showIcons": false,
     "workbench.startupEditor": "none",
     "workbench.iconTheme": "material-icon-theme",
@@ -186,7 +183,7 @@
     "githubPullRequests.createOnPublishBranch": "never",
     "git.mergeEditor": false,
     "diffEditor.ignoreTrimWhitespace": true,
-    "diffEditor.renderSideBySide": false,
+    "diffEditor.renderSideBySide": true,
     "git.autofetch": true,
 
     "yaml.customTags": [
@@ -219,7 +216,9 @@
         "!Split sequence"
     ],
     "python.languageServer": "Jedi",
-    "python.analysis.extraPaths": [],
+    "python.analysis.extraPaths": [
+      "src"
+    ],
     "cSpell.userWords": [
         "pyspark"
     ],
@@ -227,4 +226,87 @@
         "*.yml": "yaml",
     },
     "window.density.editorTabHeight": "compact",
+    "metals.javaHome": "/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home",
+    "java.jdt.ls.java.home": "/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home",
+    "mssql.connectionGroups": [
+      {
+        "name": "ROOT",
+        "id": "ROOT"
+      },
+      {
+        "name": "Rabobank",
+        "color": "#0078D4",
+        "id": "A8371B8D-C05E-4EA4-90D8-AC7AF38E9401",
+        "parentId": "ROOT"
+      }
+    ],
+    "docker.extension.enableComposeLanguageServer": false,
+    "mssql.autoDisableNonTSqlLanguageService": true,
+    "mssql.connections": [
+      {
+        "authenticationType": "AzureMFA",
+        "connectTimeout": 30,
+        "applicationName": "vscode-mssql",
+        "applicationIntent": "ReadWrite",
+        "server": "sql-test-operations.database.windows.net",
+        "database": "metadata-test",
+        "user": "Nguyen, TT (Tam) - Tam.T.Nguyen@rabobank.nl",
+        "commandTimeout": 30,
+        "encrypt": "Mandatory",
+        "groupId": "A8371B8D-C05E-4EA4-90D8-AC7AF38E9401",
+        "trustServerCertificate": true,
+        "accountId": "f4a3626a-843a-451b-889b-7d99560fb735.6e93a626-8aca-4dc1-9191-ce291b4b75a1",
+        "profileName": "",
+        "email": "Tam.T.Nguyen@rabobank.nl",
+        "azureAccountToken": "",
+        "expiresOn": 1770387787,
+        "id": "9AE07709-ECF3-406F-A1F8-5BDE19D94904"
+      },
+      {
+        "authenticationType": "AzureMFA",
+        "connectTimeout": 30,
+        "applicationName": "vscode-mssql",
+        "applicationIntent": "ReadWrite",
+        "server": "sql-dev-operations.database.windows.net",
+        "database": "metadata-dev",
+        "commandTimeout": 30,
+        "encrypt": "Mandatory",
+        "trustServerCertificate": true,
+        "accountId": "f4a3626a-843a-451b-889b-7d99560fb735.6e93a626-8aca-4dc1-9191-ce291b4b75a1",
+        "email": "Tam.T.Nguyen@rabobank.nl",
+        "azureAccountToken": "",
+        "expiresOn": 1772620418,
+        "groupId": "A8371B8D-C05E-4EA4-90D8-AC7AF38E9401",
+        "id": "DE056E97-D399-4A9C-BB79-139D0500AC86",
+        "profileSource": 0,
+        "user": "Nguyen, TT (Tam) - Tam.T.Nguyen@rabobank.nl"
+      }
+    ],
+    "diffEditor.experimental.showMoves": true,
+    "gitlens.views.scm.grouped.hiddenViews": {
+      "commits": false,
+      "worktrees": false,
+      "branches": false,
+      "remotes": false,
+      "stashes": false,
+      "tags": false,
+      "contributors": false,
+      "repositories": false,
+      "fileHistory": false,
+      "launchpad": false,
+      "searchAndCompare": false
+    },
+    "gitlens.views.scm.grouped.views": {
+      "commits": true,
+      "branches": true,
+      "remotes": true,
+      "stashes": true,
+      "tags": true,
+      "worktrees": true,
+      "contributors": true,
+      "fileHistory": false,
+      "repositories": true,
+      "searchAndCompare": false,
+      "launchpad": false
+    },
 }
